@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grzyby>
+	<podstawczaki>
+		<grzyby_jadalne>
+			<gatunek rodzaj="borowik" chroniony="nie" zastosowanie="przemysl_spozywczy">
+				<nazwa jezyk="polska">Borowik szlachetny</nazwa>
+				<nazwa jezyk="lacinska">Boletus edulis</nazwa>
+				<nazwa jezyk="potoczna">Prawdziwek</nazwa>
+				<rodzina>borowikowate</rodzina>
+				<rzad>borowikowce</rzad>
+				<klasa>pieczarniaki</klasa>
+				<opis zrodlo="https://pl.wikipedia.org/wiki/Borowik_szlachetny">Jest to gatunek często spotykany w Polsce, zwłaszcza w górach, rzadziej na niżu, zwykle rzadki w okolicach wielkich miast. Aromatyczny grzyb jadalny o szerokich zastosowaniach w kuchniach europejskich. Nadaje się do bezpośredniego spożycia, marynowania, suszenia i do wszelkich innych rodzajów przerobu.</opis>
+				<media><zdjecie zrodlo="images/bs.jpg">borowik szlachetny</zdjecie></media>
+			</gatunek>
+		</grzyby_jadalne>
+		<grzyby_niejadalne>
+			<gatunek rodzaj="goryczak" chroniony="nie" zastosowanie="brak">
+				<nazwa jezyk="polska">Goryczak żółciowy</nazwa>
+				<nazwa jezyk="lacinska">Tylopilus felleus</nazwa>
+				<nazwa jezyk="potoczna">Szatan</nazwa>
+				<rodzina>borowikowate</rodzina>
+				<rzad>borowikowce</rzad>
+				<klasa>pieczarniaki</klasa>
+				<opis zrodlo="https://www.ekologia.pl/srodowisko/przyroda/goryczak-zolciowy-opis-wystepowanie-i-zdjecia-grzyb-goryczak-zolciowy-ciekawostki,25878.html">Goryczak żółciowy (Tylopilus felleus) znany jest pod wieloma różnymi nazwami, z których znaczna część odwołuje się do charakterystycznego, intensywnego smaku miąższu: grzybek gorzki, zajączek gorzki, grzyb cierpki – to tylko niektóre przykłady. Wspomniana wyżej nazwa „szatan” odnosi się jednak wyłącznie do borowika szatańskiego, wcale niepodobnego wizualnie, który na dodatek w Polsce stanowi rzadkość, bowiem preferuje klimat ciepły i gleby bogate w wapń. Goryczaki żółciowe są natomiast w naszym kraju bardzo powszechne.</opis>
+				<media><zdjecie zrodlo="images/gz.jpg">goryczak żółciowy</zdjecie></media>
+			</gatunek>
+		</grzyby_niejadalne>
+		<grzyby_trujace>
+			<gatunek rodzaj="muchomor" chroniony="nie" zastosowanie="brak">
+				<nazwa jezyk="polska">Muchomor zielonawy</nazwa>
+				<nazwa jezyk="lacinska">Amanita phalloides</nazwa>
+				<nazwa jezyk="potoczna">Muchomor sromotnikowy</nazwa>
+				<rodzina>muchomorowate</rodzina>
+				<rzad>pieczarkowce</rzad>
+				<klasa>pieczarniaki</klasa>
+				<opis zrodlo="https://pl.wikipedia.org/wiki/Muchomor_zielonawy">Gatunek grzybów pospolity w Polsce, jest dla ludzi silnie trujący, nawet przy zaawansowanym leczeniu spożycie bardzo często kończy się śmiercią. Dla wielu drobnych zwierząt, np. ślimaków i owadów jest nieszkodliwy</opis>
+				<media><zdjecie zrodlo="images/ms.jpg">muchomor zielonawy</zdjecie></media>
+			</gatunek>
+		</grzyby_trujace>
+	</podstawczaki>
+	<workowce>
+		<grzyby_jadalne>
+			<gatunek rodzaj="drozdze" chroniony="nie" zastosowanie="przemysl_spozywczy,badania">
+				<nazwa jezyk="polska">Drożdże</nazwa>
+				<nazwa jezyk="lacinska">Saccharomyces cerevisiae</nazwa>
+				<nazwa jezyk="potoczna">Brak</nazwa>
+				<rodzina>drozdzakowate</rodzina>
+				<rzad>drozdzakowce</rzad>
+				<klasa>drozdzaki</klasa>
+				<opis zrodlo="https://pl.wikipedia.org/wiki/Saccharomyces_cerevisiae"> Gatunek jednokomórkowych grzybów, którego poszczególne szczepy (drożdże piekarniane, drożdże górnej fermentacji, drożdże winiarskie, gorzelnicze) znajdują zastosowanie w różnych dziedzinach spożywczych i posiadają ogromne znaczenie dla człowieka, który wykorzystywał je już w starożytności w piekarnictwie, browarnictwie czy później w gorzelnictwie. Drożdże Saccharomyces cerevisiae to jeden z najpowszechniejszych modeli w badaniach, w biologii molekularnej i komórki, komórek eukariotycznych oraz jeden z najwnikliwiej badanych organizmów.</opis>
+				<media><zdjecie zrodlo="images/d.jpg">drożdże</zdjecie></media>
+			</gatunek>
+		</grzyby_jadalne>
+	</workowce>
+	<jadlospis>
+		<sniadanie>tofucznica z grzybami</sniadanie>
+		<drugie_sniadanie>grzyby smażone</drugie_sniadanie>
+		<lunch>zapiekanka z grzybami</lunch>
+		<obiad>
+			<pierwsze_danie>zupa grzybowa</pierwsze_danie>
+			<drugie_danie>kotlety grzybowe</drugie_danie>
+		</obiad>
+		<deser>lody grzybowe</deser>
+		<podwieczorek>tarta grzybowa</podwieczorek>
+		<kolacja>pierogi z grzybami</kolacja>
+		<podkurek>grzyby w śmietanie</podkurek>
+		<cena>4.20zł 0.50zł 3.14zł 5zł 6.66zł 6.90zł 22.72zł 10zł 15zł</cena>
+	</jadlospis>
+	<grzybobranie data="2020-10-23">
+		<komentarz>raport z grzybobrania</komentarz>
+		<ocena>udane</ocena>
+		<ocena>10</ocena>
+		<pogoda>słonecznie</pogoda>
+		Temperatura w Kelwinach<temperaturaK>293</temperaturaK>
+	</grzybobranie>
+</grzyby>

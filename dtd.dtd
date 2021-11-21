@@ -1,0 +1,49 @@
+
+<!ELEMENT grzyby (podstawczaki,workowce,jadlospis,grzybobranie)>
+        <!ELEMENT podstawczaki (grzyby_jadalne|grzyby_niejadalne|grzyby_trujace)*>
+        <!ELEMENT grzyby_jadalne (gatunek)*>
+        <!ELEMENT gatunek ((nazwa_polska|nazwa_lacinska),rodzina,rzad,klasa,opis,media)>
+        <!ELEMENT nazwa_polska (#PCDATA)>
+        <!ELEMENT nazwa_lacinska (#PCDATA)>
+        <!ATTLIST gatunek
+                chroniony (tak|nie) #IMPLIED
+                rodzaj CDATA #REQUIRED
+                zastosowanie CDATA "brak">
+        <!ELEMENT rodzina (#PCDATA)>
+        <!ELEMENT rzad (#PCDATA)>
+        <!ELEMENT klasa (#PCDATA)>
+        <!ELEMENT opis (#PCDATA)>
+        <!ATTLIST opis
+                zrodlo CDATA #REQUIRED>
+        <!ELEMENT media (zdjecie)*>
+        <!ELEMENT zdjecie (#PCDATA)>
+        <!ATTLIST zdjecie
+                zrodlo CDATA #REQUIRED>
+        <!ELEMENT grzyby_niejadalne (gatunek)*>
+        <!ELEMENT grzyby_trujace (gatunek)*>
+        <!ELEMENT workowce (grzyby_jadalne)*>
+        <!ELEMENT jadlospis (sniadanie,drugie_sniadanie,lunch,obiad,deser,podwieczorek,kolacja,podkurek,cena)*>
+        <!ELEMENT sniadanie (#PCDATA)>
+        <!ELEMENT drugie_sniadanie (#PCDATA)>
+        <!ELEMENT lunch (#PCDATA)>
+        <!ELEMENT obiad (pierwsze_danie,drugie_danie)*>
+        <!ELEMENT pierwsze_danie (#PCDATA)>
+        <!ELEMENT drugie_danie (#PCDATA)>
+        <!ELEMENT deser (#PCDATA)>
+        <!ELEMENT podwieczorek (#PCDATA)>
+        <!ELEMENT kolacja (#PCDATA)>
+        <!ELEMENT podkurek (#PCDATA)>
+        <!ELEMENT cena (#PCDATA)>
+        <!ELEMENT grzybobranie (#PCDATA|komentarz|ocena|pogoda|temperaturaK)*>
+        <!ATTLIST grzybobranie
+                %day;
+                %month;
+                rok CDATA #REQUIRED>
+        <!ELEMENT komentarz (#PCDATA)>
+        <!ELEMENT ocena (#PCDATA)>
+        <!ELEMENT pogoda (#PCDATA)>
+        <!ELEMENT temperaturaK (#PCDATA)>
+        <!ENTITY opis_bs "Jest to gatunek często spotykany w Polsce, zwłaszcza w górach, rzadziej na niżu, zwykle rzadki w okolicach wielkich miast. Aromatyczny grzyb jadalny o szerokich zastosowaniach w kuchniach europejskich. Nadaje się do bezpośredniego spożycia, marynowania, suszenia i do wszelkich innych rodzajów przerobu.">
+        <!ENTITY opis_d SYSTEM "drozdze.xml">
+        <!ENTITY % day "dzien (1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31) #REQUIRED">
+        <!ENTITY % month "miesiac (1|2|3|4|5|6|7|8|9|10|11|12) #REQUIRED">

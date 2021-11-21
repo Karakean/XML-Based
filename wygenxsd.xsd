@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="grzyby">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="podstawczaki">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="grzyby_jadalne">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="gatunek">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element maxOccurs="unbounded" name="nazwa">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="jezyk" type="xs:string" use="required" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="rodzina" type="xs:string" />
+													<xs:element name="rzad" type="xs:string" />
+													<xs:element name="klasa" type="xs:string" />
+													<xs:element name="opis">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="zrodlo" type="xs:string" use="required" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="media">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="zdjecie">
+																	<xs:complexType>
+																		<xs:simpleContent>
+																			<xs:extension base="xs:string">
+																				<xs:attribute name="zrodlo" type="xs:string" use="required" />
+																			</xs:extension>
+																		</xs:simpleContent>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="rodzaj" type="xs:string" use="required" />
+												<xs:attribute name="chroniony" type="xs:string" use="required" />
+												<xs:attribute name="zastosowanie" type="xs:string" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="grzyby_niejadalne">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="gatunek">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element maxOccurs="unbounded" name="nazwa">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="jezyk" type="xs:string" use="required" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="rodzina" type="xs:string" />
+													<xs:element name="rzad" type="xs:string" />
+													<xs:element name="klasa" type="xs:string" />
+													<xs:element name="opis">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="zrodlo" type="xs:string" use="required" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="media">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="zdjecie">
+																	<xs:complexType>
+																		<xs:simpleContent>
+																			<xs:extension base="xs:string">
+																				<xs:attribute name="zrodlo" type="xs:string" use="required" />
+																			</xs:extension>
+																		</xs:simpleContent>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="rodzaj" type="xs:string" use="required" />
+												<xs:attribute name="chroniony" type="xs:string" use="required" />
+												<xs:attribute name="zastosowanie" type="xs:string" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="grzyby_trujace">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="gatunek">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element maxOccurs="unbounded" name="nazwa">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="jezyk" type="xs:string" use="required" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="rodzina" type="xs:string" />
+													<xs:element name="rzad" type="xs:string" />
+													<xs:element name="klasa" type="xs:string" />
+													<xs:element name="opis">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="zrodlo" type="xs:string" use="required" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="media">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="zdjecie">
+																	<xs:complexType>
+																		<xs:simpleContent>
+																			<xs:extension base="xs:string">
+																				<xs:attribute name="zrodlo" type="xs:string" use="required" />
+																			</xs:extension>
+																		</xs:simpleContent>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="rodzaj" type="xs:string" use="required" />
+												<xs:attribute name="chroniony" type="xs:string" use="required" />
+												<xs:attribute name="zastosowanie" type="xs:string" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="workowce">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="grzyby_jadalne">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="gatunek">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element maxOccurs="unbounded" name="nazwa">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="jezyk" type="xs:string" use="required" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="rodzina" type="xs:string" />
+													<xs:element name="rzad" type="xs:string" />
+													<xs:element name="klasa" type="xs:string" />
+													<xs:element name="opis">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="zrodlo" type="xs:string" use="required" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="media">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="zdjecie">
+																	<xs:complexType>
+																		<xs:simpleContent>
+																			<xs:extension base="xs:string">
+																				<xs:attribute name="zrodlo" type="xs:string" use="required" />
+																			</xs:extension>
+																		</xs:simpleContent>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="rodzaj" type="xs:string" use="required" />
+												<xs:attribute name="chroniony" type="xs:string" use="required" />
+												<xs:attribute name="zastosowanie" type="xs:string" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="jadlospis">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="sniadanie" type="xs:string" />
+							<xs:element name="drugie_sniadanie" type="xs:string" />
+							<xs:element name="lunch" type="xs:string" />
+							<xs:element name="obiad">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="pierwsze_danie" type="xs:string" />
+										<xs:element name="drugie_danie" type="xs:string" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="deser" type="xs:string" />
+							<xs:element name="podwieczorek" type="xs:string" />
+							<xs:element name="kolacja" type="xs:string" />
+							<xs:element name="podkurek" type="xs:string" />
+							<xs:element name="cena" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="grzybobranie">
+					<xs:complexType mixed="true">
+						<xs:sequence>
+							<xs:element name="komentarz" type="xs:string" />
+							<xs:element maxOccurs="unbounded" name="ocena" type="xs:string" />
+							<xs:element name="pogoda" type="xs:string" />
+							<xs:element name="temperaturaK" type="xs:unsignedShort" />
+						</xs:sequence>
+						<xs:attribute name="data" type="xs:date" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

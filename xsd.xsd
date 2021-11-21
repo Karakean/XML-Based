@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+
+	<xs:element name="grzyby">
+	<xs:complexType>
+		<xs:all>
+			<xs:element name="podstawczaki" type="podstawczakiType"/>
+			<xs:element name="workowce">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="grzyby_jadalne"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="jadlospis" type="jadlospisType"/>
+			<xs:element name="grzybobranie" type="grzybobranieType"/>
+		</xs:all>
+	</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="podstawczakiType">
+		<xs:sequence>
+			<xs:element ref="grzyby_jadalne"/>
+			<xs:element name="grzyby_niejadalne">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="gatunek"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="grzyby_trujace">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="gatunek"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="grzyby_jadalneType">
+		<xs:sequence>
+		<xs:element ref="gatunek"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="gatunekType">
+		<xs:sequence>
+				<xs:element ref="nazwa" maxOccurs="3"/>
+				<xs:group ref="systematyka"/>
+				<xs:element ref="opis"/>
+				<xs:element name="media" type="mediaType"/>
+		</xs:sequence>
+		<xs:attribute name="rodzaj" type="xs:string"/>
+		<xs:attribute name="chroniony" type="xs:string"/>
+		<xs:attribute name="zastosowanie" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:group name="systematyka">
+		<xs:sequence>
+			<xs:element name="rodzina" type="xs:string"/>
+			<xs:element name="rzad" type="xs:string"/>
+			<xs:element name="klasa" type="xs:string"/>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="linkType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute ref="zrodlo"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:complexType name="mediaType">
+		<xs:sequence>
+			<xs:element ref="zdjecie"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="zdjecie" type="linkType"/>
+	<xs:element name="grzyby_jadalne" type="grzyby_jadalneType"/>
+	<xs:element name="gatunek" type="gatunekType"/>
+	<xs:attribute name="zrodlo" type="xs:anyURI"/>
+
+	<xs:element name="nazwa">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="jezyk" type="xs:string"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="opis">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="zrodlo"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="jadlospisType">
+		<xs:sequence>
+			<xs:element name="sniadanie" type="xs:string"/>
+			<xs:element name="drugie_sniadanie" type="xs:string"/>
+			<xs:element name="lunch" type="xs:string"/>
+			<xs:element name="obiad">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="pierwsze_danie" type="xs:string"/>
+						<xs:element name="drugie_danie" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="deser" type="xs:string"/>
+			<xs:element name="podwieczorek" type="xs:string"/>
+			<xs:element name="kolacja" type="xs:string"/>
+			<xs:element name="podkurek" type="xs:string"/>
+			<xs:element name="cena">
+				<xs:simpleType>
+					<xs:restriction>
+						<xs:simpleType>
+							<xs:list itemType="xs:string"/>
+						</xs:simpleType>
+						<xs:maxLength value="9"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+
+	
+	<xs:complexType name="grzybobranieType" mixed="true">
+		<xs:sequence>
+			<xs:element name="komentarz" type="komentarzType">
+			</xs:element>
+			<xs:element name="ocena" maxOccurs="2">
+				<xs:simpleType>
+					<xs:union memberTypes="ocenaSlowna ocena1-10" />
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="pogoda" type="pogodaType"/>
+			<xs:choice>
+				<xs:element name="temperaturaK" type="temperaturaKType"/>
+				<xs:element name="temperaturaC" type="temperaturaCType"/>
+			</xs:choice>
+		</xs:sequence>
+		<xs:attribute name="data" type="xs:date"/>
+	</xs:complexType>
+
+	<xs:simpleType name="komentarzType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ocenaSlowna">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="udane|nieudane"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ocena1-10">
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="pogodaType">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="słonecznie" />
+					<xs:enumeration value="podchmurnie"/>
+					<xs:enumeration value="wietrznie" />
+					<xs:enumeration value="bezwietrznie" />
+					<xs:enumeration value="deszczowo" />
+					<xs:enumeration value="śnieżnie"/>
+					<xs:enumeration value="burzowo"/>
+					<xs:enumeration value="mgliście"/>
+				</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="temperaturaKType">
+		<xs:restriction base="xs:decimal">
+			<xs:minExclusive value="173"/>
+			<xs:maxExclusive value="333"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="temperaturaCType">
+		<xs:restriction base="xs:decimal">
+			<xs:minExclusive value="-100"/>
+			<xs:maxExclusive value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>
