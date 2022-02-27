@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="xslt2.xslt"?>
+<grzybobranie>
+	<autor>
+		<imie>Mikołaj </imie>
+		<nazwisko>Nowak</nazwisko>
+	</autor>
+	<kategoria rodzaj="korzysci" >
+		<zawartosc id="1">
+			<powod>Źródło cennych mikroskładników i witamin</powod>
+			<powod>Wysoka zawartość białka</powod>
+			<powod>Oszczędność pieniędzy</powod>
+		</zawartosc>
+	</kategoria>
+	<kategoria rodzaj="przyklady_grzybow">
+		<zawartosc id="1">
+			<grupa>1</grupa>
+			<rodzaj>Jadalne</rodzaj>
+			<gatunek1>Borowik szlachetny
+				<lacina>(Boletus edulis)</lacina>
+			</gatunek1>
+			<gatunek2>Boczniak ostrygowaty
+				<lacina>(Pleurotus ostreatus)</lacina>
+			</gatunek2>
+		</zawartosc>
+		<zawartosc id="2">
+			<grupa>2</grupa>
+			<rodzaj>Jednorazowo jadalne</rodzaj>
+			<gatunek1>Muchomor sromotnikowy
+				<lacina>(Amanita phalloides)</lacina>
+			</gatunek1>
+			<gatunek2>Muchomor jadowity
+				<lacina>(Amanita virosa)</lacina>
+			</gatunek2>
+		</zawartosc>
+		<zawartosc id="3">
+			<grupa>3</grupa>
+			<rodzaj>Magiczne</rodzaj>
+			<gatunek1>Łysiczka lancetowata
+				<lacina>(Psilocybe semilanceata)</lacina>
+			</gatunek1>
+			<gatunek2>Muchomor czerwony
+				<lacina>(Amanita muscaria)</lacina>
+			</gatunek2>
+		</zawartosc>
+	</kategoria>
+	<kategoria rodzaj="porownanie"><zawartosc/></kategoria>
+	<kategoria rodzaj="dania">
+		<zawartosc>
+		<sniadanie>Tofucznica z rydzami</sniadanie>
+		<pierwsze_danie>Zupa grzybowa</pierwsze_danie>
+		<drugie_danie>Kotlety z kani</drugie_danie>
+		<kolacja>Bigos z boczniakami</kolacja>
+		<podkurek>Kurki w śmietanie</podkurek>
+		</zawartosc>
+	</kategoria>
+	<dodatki>
+		<ciekawostki>
+			<ciekawostka1>Tyle pieczarek rocznie eksportuje Polska: </ciekawostka1>
+			<ciekawostka2> Importowanych pieczarek pochodzi z Polski.</ciekawostka2>
+		</ciekawostki>
+		<links>
+			<link source="https://grzyby.pl/">atlas polskich grzybów</link>
+			<link source="https://www.facebook.com/groups/261070044540563/">facebookowa grupa dla pomorskich grzybiarzy</link>
+			<link source="https://hyperreal.info/talk/faq-ysiczka-lancetowata-t14483.html">dla ciekawskich</link>
+		</links>
+	</dodatki>
+</grzybobranie>
